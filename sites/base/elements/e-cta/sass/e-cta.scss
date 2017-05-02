@@ -1,0 +1,34 @@
+
+/**
+ * Base styles -------------------------------------------------
+ */
+
+.e-cta {
+    @include use-text('t4');
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: $color-white-w1;
+    background-color: $color-black-b1;
+    padding: 10px 20px;
+}
+
+
+/**
+ * Secondary styles -------------------------------------------------
+ */
+
+.e-cta--secondary {
+    color: $color-white-w1;
+    background-color: $color-anthracite-a3;
+}
+
+
+/**
+ * Tertiary styles -------------------------------------------------
+ */
+
+.e-cta--tertiary {
+    color: $color-white-w1;
+    background-color: $color-anthracite-a5;
+}

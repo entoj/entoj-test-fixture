@@ -1,0 +1,4 @@
+{
+    "image": "@image:placeholder-*.png",
+    "alt": "@lipsum:w,2,4"
+}

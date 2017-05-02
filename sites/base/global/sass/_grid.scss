@@ -1,0 +1,27 @@
+$susy: (
+    columns: 12,
+    gutters: 1 / 10,
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    global-box-sizing: border-box
+);
+
+
+.g-grid__column-eight {
+    @include span(8);
+}
+
+
+.g-grid__column-four {
+    @include span(4);
+}
+
+
+.g-grid__row {
+    &::after {
+        clear: both;
+        content: ' ';
+        display: table;
+    }
+}

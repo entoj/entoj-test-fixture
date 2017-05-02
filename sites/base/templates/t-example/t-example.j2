@@ -1,0 +1,19 @@
+<!doctype html>
+<html class="no-js" lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        {{ global_nojs() }}
+        {{ global_css() }}
+        <link rel="stylesheet" type="text/css" href="/base/global/assets/css/examples.css" />
+    </head>
+    <body class="t-bare {% block bodyClass %}{% endblock %}">
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+        {{ global_js() }}
+    </body>
+</html>

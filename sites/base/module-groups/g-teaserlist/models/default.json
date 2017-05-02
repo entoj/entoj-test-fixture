@@ -1,0 +1,12 @@
+{
+    "headline": "@lipsum:w,3,6",
+    "items":
+    [
+        "@include:m-teaser/default",
+        "@include:m-teaser/default",
+        "@include:m-teaser/default",
+        "@include:m-teaser/default",
+        "@include:m-teaser/default",
+        "@include:m-teaser/default"
+    ]
+}

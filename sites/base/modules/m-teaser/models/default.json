@@ -1,0 +1,7 @@
+{
+    "image": "@include:e-image/default",
+    "headline": "@lipsum:w,3,6",
+    "copy": "@lipsum-html:w,10,20",
+    "cta": "@lipsum:w,2,4",
+    "link": "https://www.google.com"
+}

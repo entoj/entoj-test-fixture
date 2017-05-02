@@ -1,0 +1,44 @@
+/**
+ * Base styles -------------------------------------------------
+ */
+
+.e-headline,
+%e-headline {
+    color: $color-anthracite-a1;
+}
+
+
+.e-headline--h1,
+%e-headline--h1 {
+    @include use-text(h1);
+}
+
+
+.e-headline--h2,
+%e-headline--h2 {
+    @include use-text(h2);
+}
+
+
+.e-headline--h3,
+%e-headline--h3 {
+    @include use-text(h3);
+}
+
+
+.e-headline--h4,
+%e-headline--h4 {
+    @include use-text(h4);
+}
+
+
+.e-headline--h5,
+%e-headline--h5 {
+    @include use-text(h5);
+}
+
+
+.e-headline--h6,
+%e-headline--h6 {
+    @include use-text(h6);
+}

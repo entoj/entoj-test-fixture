@@ -1,0 +1,9 @@
+{
+    "state":
+    {
+        "concept": "None",
+        "frontend": "None",
+        "integration": "None"
+    },
+    "extends": "base"
+}

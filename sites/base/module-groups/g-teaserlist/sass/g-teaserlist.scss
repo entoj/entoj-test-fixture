@@ -1,0 +1,27 @@
+
+/**
+ * Base styles -------------------------------------------------
+ */
+
+.g-teaserlist {
+    .g-teaserlist__teasers {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .g-teaserlist__teaser {
+        display: flex;
+        flex: 0 0 25%;
+        min-width: 250px;
+        padding: 0 10px 10px 0;
+
+        @include use-breakpoint(mini-tablet, below) {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+
+        .m-teaser {
+            width: 100%;
+        }
+    }
+}

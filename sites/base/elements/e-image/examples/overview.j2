@@ -1,0 +1,19 @@
+{% extends "/base/templates/t-example" %}
+{% set settings =
+    {
+        mobile:
+        {
+            name: 'mobile',
+            aspect: '10x7',
+            width: 410
+        },
+        all:
+        {
+            aspect: '5x2',
+            width: 830
+        }
+    }
+%}
+{% block content %}
+    {{ e_image(model='e-image/default', settings=settings) }}
+{% endblock %}

@@ -1,0 +1,23 @@
+{##
+    @param {Object} [model] - The data model
+    @param {String} [classes] - Any additional classes that will be added to the root element
+#}
+{% macro g_teaserlist(model=false, classes='') %}
+
+    {# Prepare #}
+    {% set model = model|load %}
+    {% set moduleClass = 'g-teaserlist' %}
+
+    {# Render #}
+    <div class="{{ moduleClass }} {{ classes }}" >
+        {{ e_headline(text=model.headline, level=2, classes=moduleClass + '__headline') }}
+        <div class="{{ moduleClass }}__teasers">
+            {% for item in model.items %}
+                <div class="{{ moduleClass }}__teaser">
+                    {{ m_teaser(model=item) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endmacro %}

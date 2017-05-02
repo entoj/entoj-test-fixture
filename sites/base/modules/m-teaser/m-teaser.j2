@@ -1,0 +1,43 @@
+{##
+    @param {Enumeration} [type=content]
+        content
+        hero
+    @param {String} [classes] - Any additional classes that will be added to the root element
+#}
+{% macro m_teaser(type='content', model=false, classes='') %}
+
+    {# Prepare #}
+    {% set model = model|load %}
+    {% set moduleClass = 'm-teaser' %}
+    {% set moduleClasses = [type]|moduleClasses(moduleClass) %}
+    {% set imageSettings =
+        {
+            mobile:
+            {
+                name: 'mobile',
+                aspect: '1x1',
+                width: 410
+            },
+            all:
+            {
+                aspect: '16x9',
+                width: 830
+            }
+        }
+    %}
+
+    {# Render #}
+    <div class="{{ moduleClasses }} {{ classes }}" data-entity="{{ moduleClass }}">
+        {{ e_image(model=model.image, settings=imageSettings, classes=moduleClass + '__image') }}
+        <div class="{{ moduleClass }}__body">
+            {{ e_headline(text=model.headline, level=3, classes=moduleClass + '__headline') }}
+            <p class="{{ moduleClass }}__copy">{{ model.copy }}</p>
+            {% if type == 'content' %}
+                {{ e_cta(type='tertiary', text=model.cta, link=model.link, classes=moduleClass + '__cta') }}
+            {% else %}
+                {{ e_cta(type='secondary', text=model.cta, link=model.link, classes=moduleClass + '__cta') }}
+            {% endif %}
+        </div>
+    </div>
+
+{% endmacro %}

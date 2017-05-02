@@ -1,0 +1,18 @@
+{##
+    @param {String} [text]
+    @param {Integer} [level] - Headline level (1-5)
+    @param {String} [classes] - Additonal css classes that are added to the root element
+#}
+{% macro e_headline(text='', level=1, classes='') %}
+
+    {# Prepare #}
+    {% set moduleClass = 'e-headline' %}
+    {% set element = 'h' + level %}
+    {% set moduleClasses = [element]|moduleClasses(moduleClass) %}
+
+    {# Render #}
+    <{{element}} class="{{ moduleClasses }} {{ classes }}">
+        {{ text }}
+    </{{ element }}>
+
+{% endmacro %}

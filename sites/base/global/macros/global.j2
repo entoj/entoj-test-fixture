@@ -1,0 +1,31 @@
+{##
+    Provides the default stylesheets for the base site
+#}
+{% macro global_css() %}
+    <link rel="stylesheet" media="all" href="/base/css/common.css" />
+{% endmacro %}
+
+
+{##
+    Provides the js bootstraping for the base site
+#}
+{% macro global_js() %}
+    {% if environment.get('js.bundle', false) %}
+        <script src="/base/common.js"></script>
+    {% else %}
+        <script src="/jspm_packages/system.js"></script>
+        <script src="/jspm.js"></script>
+    {% endif %}
+    {# TODO: Video script should only load if video is integrated on current page. This seems to be problematic in IE11. #}
+    <script type="text/javascript" src="https://e.video-cdn.net/v2/embed.js"></script>
+    <script>
+        System.import('base/global/js/bootstrap');
+    </script>
+{% endmacro %}
+
+
+{% macro global_nojs() %}
+    <script>
+        document.getElementsByTagName('html')[0].classList.remove('no-js');
+    </script>
+{% endmacro %}

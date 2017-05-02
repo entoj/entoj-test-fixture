@@ -1,0 +1,21 @@
+{##
+    @param {Enumeration} type
+        primary - Primary (default)
+        secondary - Secondary
+        tertiary - Tertiary
+    @param {String} [text]
+    @param {String} [link]
+    @param {String} classes - Additonal css classes that are added to the root element
+#}
+{% macro e_cta(type='primary', text='', link='', classes='') %}
+
+    {# Prepare #}
+    {% set moduleClass = 'e-cta' %}
+    {% set moduleClasses = [type]|moduleClasses(moduleClass) %}
+
+    {# Render #}
+    <a class="{{ moduleClasses }} {{ classes }}" href="{{ link }}">
+        {{ text }}
+    </a>
+
+{% endmacro %}

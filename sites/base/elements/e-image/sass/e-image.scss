@@ -1,0 +1,30 @@
+/**
+ * Base styles -------------------------------------------------
+ */
+
+.e-image {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: $color-white-w2;
+}
+
+
+.e-image__img {
+    display: block;
+    width: 100%;
+
+    &.do-lazyload,
+    &.is-lazyloading {
+        opacity: 0;
+    }
+
+    &.is-lazyloaded {
+        opacity: 1;
+        transition: $transition-image-loaded;
+
+        + .e-image__background {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{##
+    @param {Object} [model]
+    @param {Object} [settings]
+    @param {String} [classes]
+#}
+{% macro e_image(model=false, settings=false, classes='') %}
+
+    {# Prepare #}
+    {% set model = model|load %}
+    {% set moduleClass = 'e-image' %}
+
+    {# Render #}
+    <picture class="{{ moduleClass }} {{ classes }}">
+        {% set image = null %}
+        {% if settings|notempty %}
+            {% for index, setting in settings %}
+                {% if index != 'all' %}
+                    {% set mediaQuery = setting.name|mediaQuery %}
+                    {% set image = model|imageUrl(setting.aspect, setting.width, setting.height) %}
+                    <source data-srcset="{{ image.src }}" media="{{ mediaQuery }}" />
+                {% endif %}
+            {% endfor %}
+            {% for index, setting in settings %}
+                {% if index == 'all' %}
+                    {% set image = model|imageUrl(setting.aspect, setting.width, setting.height) %}
+                    <source data-srcset="{{ image.src }}" />
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if image|empty %}
+            {% set image = model|imageUrl %}
+        {% endif %}
+        <img class="{{ moduleClass }}__img do-lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{{ image.src }}" alt="{{ model.alt }}" />
+    </picture>
+
+{% endmacro %}
