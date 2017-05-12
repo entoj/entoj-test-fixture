@@ -1,4 +1,5 @@
 {
     "image": "placeholder-*.png",
-    "alt": "@lipsum:w,2,4"
+    "alt": "@lipsum:w,2,4",
+    "tags": ["one", "two"]
 }
