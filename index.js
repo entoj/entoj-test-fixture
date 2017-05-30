@@ -41,7 +41,7 @@ configuration.settings =
 // Some helpers
 const siteTemplate = '${site.name.urlify()}';
 const entityCategoryTemplate = siteTemplate + '/${entityCategory.pluralName.urlify()}';
-const entityIdTemplate = entityCategoryTemplate + '/${entityCategory.shortName.urlify()}${entityId.number.format(3)}-${entityId.name.urlify()}';
+const entityIdTemplate = entityCategoryTemplate + '/${entityCategory.shortName.urlify()}-${entityId.name.urlify()}';
 
 
 // Urls
