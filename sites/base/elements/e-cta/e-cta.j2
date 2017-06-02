@@ -11,10 +11,9 @@
 
     {# Prepare #}
     {% set moduleClass = 'e-cta' %}
-    {% set moduleClasses = [type]|moduleClasses(moduleClass) %}
 
     {# Render #}
-    <a class="{{ moduleClasses }} {{ classes }}" href="{{ link }}">
+    <a class="{{ moduleClass }} {{ classes }}" href="{{ link }}">
         {{ text }}
     </a>
 
