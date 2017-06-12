@@ -4,5 +4,9 @@
         "concept": "Done",
         "frontend": "Progress",
         "integration": "Progress"
+    },
+    "sass":
+    {
+        "settings": "base/global/sass/settings.scss"
     }
 }

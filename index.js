@@ -74,3 +74,4 @@ configuration.pathes =
 module.exports.configuration = configuration;
 module.exports.pathToSites = require('path').join(__dirname, 'sites');
 module.exports.pathToData = require('path').join(__dirname, 'data');
+module.exports.pathToLibraries = require('path').join(__dirname, 'libraries');
