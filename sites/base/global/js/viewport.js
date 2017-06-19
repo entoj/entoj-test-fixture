@@ -44,6 +44,13 @@ export class Viewport extends Base {
     }
 
 
+    /**
+     * @property {String}
+     */
+    static get className() {
+        return 'base.global/Viewport';
+    }
+
     /* Protected ------------------------------------------------------------------------------- */
 
     /**

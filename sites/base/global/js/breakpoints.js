@@ -10,6 +10,7 @@ import { Base } from 'global/base';
  * @memberOf base.global
  */
 export class Breakpoints extends Base {
+
     /* Constants ------------------------------------------------------------------------- */
 
 
@@ -73,6 +74,14 @@ export class Breakpoints extends Base {
         this.breakpoints.push({ name: 'phablet', mediaQuery: '(min-width: 376px) and (max-width: 767px)' });
         this.breakpoints.push({ name: 'mobile', mediaQuery: '(max-width: 375px)' });
 
+    }
+
+
+    /**
+     * @property {String}
+     */
+    static get className() {
+        return 'base.global/Breakpoints';
     }
 
 

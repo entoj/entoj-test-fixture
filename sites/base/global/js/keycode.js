@@ -60,4 +60,11 @@ export class KeyCode {
         return 27;
     }
 
+
+    /**
+     * @property {String}
+     */
+    static get className() {
+        return 'base.global/KeyCode';
+    }
 }

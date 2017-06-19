@@ -8,7 +8,6 @@ import { Viewport } from 'global/viewport';
 import { Signal } from 'signals';
 import $ from 'jquery';
 import FastClick from 'fastclick';
-import { Tracking } from 'global/tracking';
 
 
 /**
@@ -23,7 +22,6 @@ export class Application extends Base {
         super();
 
         this.viewport = new Viewport();
-        this.tracking = new Tracking();
 
         // Signals
         this.signals.setupCompleted = new Signal();
@@ -97,4 +95,3 @@ export class Application extends Base {
         return promise;
     }
 }
-

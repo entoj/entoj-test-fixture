@@ -235,4 +235,12 @@ export class State {
     static get SCROLLABLE() {
         return 'is-scrollable';
     }
+
+
+    /**
+     * @property {String}
+     */
+    static get className() {
+        return 'base.global/CSS';
+    }
 }

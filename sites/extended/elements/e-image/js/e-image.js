@@ -2,10 +2,10 @@
 /**
  * Requirements
  */
-import { Component as BaseComponent } from 'global/component';
+import { Component as BaseComponent } from 'base/elements/e-image/js/e-image.js';
 
 /**
- * @memberOf base.modulegroup
+ * @memberOf extended.elements.e-image
  */
 export class Component extends BaseComponent {
 
@@ -16,7 +16,7 @@ export class Component extends BaseComponent {
      * @inheritDocs
      */
     static get className() {
-        return 'base.modulegroup.g-teaserlist/Component';
+        return 'extended.elements.e-image/Component';
     }
 
 

@@ -73,6 +73,13 @@ export class Component extends Base {
     }
 
 
+    /**
+     * @property {String}
+     */
+    static get className() {
+        return 'base.global/Component';
+    }
+
     /* Protected ------------------------------------------------------------------------- */
 
     /**
