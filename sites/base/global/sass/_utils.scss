@@ -2,6 +2,7 @@
 /**
  * Update a deeply nested key
  *
+ * @function
  * @author Hugo Giraudel
  * @param {Map} $map - Map to update
  * @param {Arglist} $keys - Keys to access to value to update
@@ -32,6 +33,7 @@
  * Returns the item named $key from $map.
  * If $key is not found $default is returned.
  *
+ * @function
  * @param {Map} $map
  * @param {String} $key
  * @param {*} $default
@@ -52,6 +54,7 @@
  * Each property name is prefixed with $prefix.
  * When $ignore is given every property found in the list will be ignored.
  *
+ * @function
  * @param {Map} $map
  * @param {String} $prefix
  * @param {List} $ignore
@@ -70,6 +73,7 @@
 /**
  * Define hover styles for screens >= $breakpoint-global-hover
  *
+ * @function
  * @param {boolean} $include-focus
  * @param {breakpoint} $hover-breakpoint
  * @returns {void}
@@ -91,6 +95,8 @@
 
 /**
  * Define keyboardfocus state
+ *
+ * @function
  * @returns {void}
  */
 @mixin keyboard-focus {
@@ -105,6 +111,7 @@
 /**
  * Adds a before element that will guarantee the defined aspect ration on a block element
  *
+ * @function
  * @param $width
  * @param $height
  */
