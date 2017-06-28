@@ -41,3 +41,12 @@
     </div>
 
 {% endmacro %}
+
+
+{##
+#}
+{% macro m_teaser_hero(model=false) %}
+
+    {{ m_teaser(type='hero', model=model) }}
+
+{% endmacro %}

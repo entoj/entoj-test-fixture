@@ -3,5 +3,12 @@
     {
         "css": "core",
         "js": "core"
+    },
+    "export":
+    {
+        "html":
+        [
+            {}
+        ]
     }
 }
