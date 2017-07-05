@@ -12,7 +12,7 @@
 
     {# Render #}
     <{{ element }} class="{{ moduleClasses }} {{ classes }}">
-        {{ text }}{{ caller() }}
+        {{ text }}{% if caller %}{{ caller() }}{% endif %}
     </{{ element }}>
 
 {% endmacro %}
