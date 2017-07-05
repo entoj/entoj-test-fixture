@@ -11,8 +11,8 @@
     {% set moduleClasses = [element]|moduleClasses(moduleClass) %}
 
     {# Render #}
-    <{{element}} class="{{ moduleClasses }} {{ classes }}">
-        {{ text }}
+    <{{ element }} class="{{ moduleClasses }} {{ classes }}">
+        {{ text }}{{ caller() }}
     </{{ element }}>
 
 {% endmacro %}
