@@ -1,9 +1,10 @@
 {##
     @param {String} [text]
     @param {Integer} [level] - Headline level (1-5)
+    @param {String} [skin]
     @param {String} [classes] - Additonal css classes that are added to the root element
 #}
-{% macro e_headline(text='', level=1, classes='') %}
+{% macro e_headline(text='', level=1, skin='light', classes='') %}
 
     {# Prepare #}
     {% set moduleClass = 'e-headline' %}

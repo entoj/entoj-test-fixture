@@ -7,7 +7,7 @@
     @param {String} [link]
     @param {String} classes - Additonal css classes that are added to the root element
 #}
-{% macro e_cta(type='primary', text='', link='', classes='') %}
+{% macro e_cta(type='primary', text, link, classes) %}
 
     {# Prepare #}
     {% set moduleClass = 'e-cta' %}
