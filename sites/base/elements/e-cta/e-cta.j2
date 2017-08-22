@@ -3,15 +3,18 @@
         primary - Primary (default)
         secondary - Secondary
         tertiary - Tertiary
+    @param {Enumeration=light} skin
+        light
+        dark
     @param {String} [text]
     @param {String} [link]
     @param {String} classes - Additonal css classes that are added to the root element
 #}
-{% macro e_cta(type='primary', text, link, classes) %}
+{% macro e_cta(type='primary', skin='light', text, link, classes) %}
 
     {# Prepare #}
     {% set moduleClass = 'e-cta' %}
-    {% set moduleClasses = [type]|moduleClasses(moduleClass) %}
+    {% set moduleClasses = [type, skin]|moduleClasses(moduleClass) %}
 
     {# Render #}
     <a class="{{ moduleClasses }} {{ classes }}" href="{{ link }}">

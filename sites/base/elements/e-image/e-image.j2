@@ -3,7 +3,7 @@
     @param {Object} [settings]
     @param {String} [classes]
 #}
-{% macro e_image(model=false, settings=false, classes='') %}
+{% macro e_image(model, settings, classes='') %}
 
     {# Prepare #}
     {% set model = model|load %}
