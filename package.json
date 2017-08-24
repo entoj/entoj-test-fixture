@@ -1,6 +1,6 @@
 {
   "name": "entoj-test-fixture",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "repository": "entoj/entoj-test-fixture",
   "author": "Christian Auth <chr.auth@gmail.com>",
   "main": "index.js",
