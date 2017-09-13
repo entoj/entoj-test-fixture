@@ -6,6 +6,13 @@
     },
     "export":
     {
+        "settings":
+        {
+            "cm":
+            {
+                "type": "com.coremedia.blueprint.common.contentbeans.CMTeasable"
+            }
+        },
         "html":
         [
             {}
