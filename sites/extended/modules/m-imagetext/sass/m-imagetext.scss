@@ -1,0 +1,74 @@
+
+/**
+ * Base styles -------------------------------------------------
+ */
+
+.m-teaser {
+    .m-teaser__image {
+        .e-image__img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .m-teaser__headline {
+        margin: 0;
+    }
+
+    .m-teaser__copy {
+        margin: 0;
+    }
+}
+
+
+
+/**
+ * Content styles -------------------------------------------------
+ */
+
+.m-teaser--content {
+    border: 1px solid $color-anthracite-a6;
+
+    .m-teaser__image {
+        @include maintain-aspect-ratio(16, 9);
+
+        @include use-breakpoint(mobile) {
+            @include maintain-aspect-ratio(1, 1);
+        }
+    }
+
+    .m-teaser__body {
+        padding: 20px;
+    }
+
+    .m-teaser__headline {
+        margin-bottom: 4px;
+    }
+
+    .m-teaser__copy {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/**
+ * Hero styles -------------------------------------------------
+ */
+
+.m-teaser--hero {
+    position: relative;
+
+    .m-teaser__image {
+        @include maintain-aspect-ratio(16, 9);
+    }
+
+    .m-teaser__body {
+        background-color: $color-white-w2;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+    }
+}

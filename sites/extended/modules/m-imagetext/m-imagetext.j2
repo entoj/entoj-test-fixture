@@ -1,0 +1,38 @@
+{##
+    @param {Enumeration} [type=content]
+        content
+        hero
+    @param {String} [classes] - Any additional classes that will be added to the root element
+#}
+{% macro m_imagetext(type='content', model=false, classes='') %}
+
+    {# Prepare #}
+    {% set model = model|load %}
+    {% set moduleClass = 'm-imagetext' %}
+    {% set moduleClasses = [type]|moduleClasses(moduleClass) %}
+    {% set imageSettings =
+        {
+            mobile:
+            {
+                name: 'mobile',
+                aspect: '1x1',
+                width: 410
+            },
+            all:
+            {
+                aspect: '16x9',
+                width: 830
+            }
+        }
+    %}
+
+    {# Render #}
+    <div class="{{ moduleClasses }} {{ classes }}">
+        {{ e_image(model=model.image, settings=imageSettings, classes=moduleClass + '__image') }}
+        <div class="{{ moduleClass }}__body">
+            {% call e_headline(level=3, classes=moduleClass + '__headline') %}{{ model.headline }}{% endcall %}
+            <p class="{{ moduleClass }}__copy">{{ model.copy }}</p>
+        </div>
+    </div>
+
+{% endmacro %}
