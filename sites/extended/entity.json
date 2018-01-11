@@ -5,5 +5,8 @@
         "frontend": "None",
         "integration": "None"
     },
-    "extends": "base"
+    "extends":
+    {
+        "site": "base"
+    }
 }
