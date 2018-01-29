@@ -4,6 +4,18 @@
         "css": "core",
         "js": "core"
     },
+    "test":
+    {
+        "cssregression":
+        [
+            {
+                "url": "examples/overview.j2"
+            },
+            {
+                "url": "examples/other.j2"
+            }
+        ]
+    },
     "export":
     {
         "settings":
