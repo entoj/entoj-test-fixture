@@ -8,5 +8,9 @@
     "extends":
     {
         "site": "base"
+    },
+    "sass":
+    {
+        "settings": "extended/global/sass/settings.scss"
     }
 }
